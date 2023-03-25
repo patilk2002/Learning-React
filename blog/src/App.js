@@ -3,6 +3,7 @@ import './App.css';
 import './User.js';
 import User from './User.js';
 import Test from './Test.js';
+import Withoutjsx from './Withoutjsx';
 import Classcp from './Classcp';
 function My(){
   return (<h2>outside</h2>)
@@ -23,6 +24,8 @@ function App() {
           <My/>
           <Inside/>
           <Classcp/>
+          <Withoutjsx/>
+
         </p>
         <a
           className="App-link"
