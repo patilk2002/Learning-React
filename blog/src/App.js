@@ -2,7 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import './User.js';
 import User from './User.js';
-import Test from './Test.js'
+import Test from './Test.js';
+import Classcp from './Classcp';
 function My(){
   return (<h2>outside</h2>)
 }
@@ -21,6 +22,7 @@ function App() {
           <Test/>
           <My/>
           <Inside/>
+          <Classcp/>
         </p>
         <a
           className="App-link"
