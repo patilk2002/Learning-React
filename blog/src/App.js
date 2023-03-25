@@ -9,13 +9,34 @@ function My(){
   return (<h2>outside</h2>)
 }
 function App() {
+  
+  let data="Kiran";
 
-  function Inside(){
-    return (<h3>Inside</h3>)
+  // function Inside(){
+  //   return (<h3>Inside</h3>)
+  // }
+
+  function apple(){
+    data="Patil"
+    alert(data);
   }
+
+
   return (
     <div className="App">
-      <header className="App-header">
+
+    <h2>Hello.....</h2>
+
+    <h1>{data}</h1>
+
+    <button onClick={apple}>click me</button>
+
+    <button onClick={()=>apple()}>click me</button>
+
+
+
+      
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           <code><h1>Hello</h1>Hello</code> 
@@ -35,7 +56,9 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
+
+
     </div>
   );
 }
