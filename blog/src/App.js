@@ -6,6 +6,8 @@ import User from './User.js';
 import Test from './Test.js';
 import Withoutjsx from './Withoutjsx';
 import Classcp from './Classcp';
+import Student from './Student';
+
 function My(){
   return (<h2>outside</h2>)
 }
@@ -26,9 +28,10 @@ function App() {
     alert(data);
   }
 
+  const[name,setName]=useState("Kiran")
 
   return (
-    <div className="App">    
+    <div >    
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -52,7 +55,12 @@ function App() {
 
           <button onClick={()=>update()}>state</button>
 
+          <Student name={name} email={"kiran.kp2004@gmai.com"} other={{address:'Mumbai',Mobile:"8767"}}/>
+          <button onClick={()=>{setName("Patil")}}>Update_Name</button>
 
+          <Student name={"Patil"} email={"kiran.kp2004@gmai.com"} other={{address:'Mumbai',Mobile:"8767"}}/>
+          <Student name={"Dipak"} email={"patil.dkp2004@gmai.com"} other={{address:'Mumbai',Mobile:"8767"}}/>
+        
         </p>
         <a
           className="App-link"
