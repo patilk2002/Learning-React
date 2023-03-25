@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import './User.js';
@@ -10,11 +11,15 @@ function My(){
 }
 function App() {
   
+  const [sdata,setsdata]=useState("kIRAN");
   let data="Kiran";
 
-  // function Inside(){
-  //   return (<h3>Inside</h3>)
-  // }
+  function update(){
+    setsdata("PATIL");
+  }
+  function Inside(){
+    return (<h3>Inside</h3>)
+  }
 
   function apple(){
     data="Patil"
@@ -23,20 +28,8 @@ function App() {
 
 
   return (
-    <div className="App">
-
-    <h2>Hello.....</h2>
-
-    <h1>{data}</h1>
-
-    <button onClick={apple}>click me</button>
-
-    <button onClick={()=>apple()}>click me</button>
-
-
-
-      
-      {/* <header className="App-header">
+    <div className="App">    
+      <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           <code><h1>Hello</h1>Hello</code> 
@@ -46,6 +39,19 @@ function App() {
           <Inside/>
           <Classcp/>
           <Withoutjsx/>
+          
+          <h2>Hello.....</h2>
+
+          <h1>{data}</h1>
+          
+          <h2>{sdata}</h2>
+
+          <button onClick={apple}>click me</button>
+
+          <button onClick={()=>apple()}>click me</button>
+
+          <button onClick={()=>update()}>state</button>
+
 
         </p>
         <a
@@ -56,8 +62,7 @@ function App() {
         >
           Learn React
         </a>
-      </header> */}
-
+      </header>
 
     </div>
   );
